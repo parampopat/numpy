@@ -878,7 +878,28 @@ def _mode_from_name(mode):
         return _mode_from_name_dict[mode.lower()[0]]
     return mode
 
+def normalize(a)
+	"""
+	Z - Score of input array
+	
+	This function computes the Z-Score normalization for the input array::
+	
+		z_[a] = (a - mean_n[a]) / std_deviation[a]
+		
+	Parameters
+    ----------
+    a: array_like
+        Input sequence.
 
+    Returns
+    -------
+    out : ndarray
+        Discrete Z-Score normalized values of `a`
+	"""
+	a = (a - np.mean(a)) / (np.std(a))
+    return a
+
+	
 def correlate(a, v, mode='valid'):
     """
     Cross-correlation of two 1-dimensional sequences.
